@@ -179,12 +179,14 @@ main section h2 {
   }
 
   #grid-floats .grid-item {
-    height: 600px;
+    height: 700px;
     width: 24%;
     box-sizing: border-box;
     margin-top: 2%;
     margin-right: .5%;
     margin-left: .5%;
+    position: relative;
+    overflow: hidden;
   }
 
   #grid-floats :nth-child(1) {
@@ -245,7 +247,7 @@ FLEXBOX: TABLETS----
   background-color: white;
   justify-content: space-around;
   width: 32.33%;
-  height: 600px;
+  height: 700px;
   margin-left: 0.5%;
   margin-right: 0.5%;
   margin-top: 2%;
@@ -257,9 +259,11 @@ FLEXBOX: TABLETS----
   overflow: hidden;
 }
 
-#grid-flex .grid-item div{
-  width: 100%;
-  border: solid 1px green;
+#grid-floats .grid-item .item-wrap{
+  width: calc(100% - .5em);
+  position: absolute;
+  height: 75vh;
+  overflow: auto;
 }
 
 #grid-flex .grid-item:nth-child(1),
@@ -271,10 +275,9 @@ FLEXBOX: TABLETS----
 }
 
 #grid-flex .grid-item img {
-  width: 80%;
-  margin-top: 20%;
-  margin-bottom: 15%;
-  border: solid 1px red;
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #grid-flex .grid-item p {
@@ -297,7 +300,7 @@ FLEXBOX: TABLETS----
 }
 
 #grid-flex .grid-item:hover {
-  background: white;
+  background: linear-gradient(#076585, #fff);
 }
 
 #grid-flex .grid-item:hover img{
@@ -318,10 +321,6 @@ FLEXBOX: TABLETS----
   }
 
   #grid-flex .grid-item {
-    height: 600px;
-  }
-
-  #grid-flex .grid-item:hover {
     height: 700px;
   }
 
@@ -330,13 +329,13 @@ FLEXBOX: TABLETS----
   }
 
   #grid-flex .grid-item img{
-    width: 50%;
-    margin-top: 10%;
-    margin-bottom: 30%;
+    width: 85%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   #grid-flex .grid-item:hover img{
-    width: 85%;
+    width: 95%;
   }
 }
 
@@ -378,8 +377,8 @@ FLEXBOX: TABLETS----
     #grid-flex .grid-item img {
     width: 70%;
     background-origin: border-box;
-    margin-top: 20%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     }
 
     #grid-flex .grid-item h3 {
