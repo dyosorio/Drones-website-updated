@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(#232526, #414345);
+    background: linear-gradient(#2980b9, #6dd5fa, #ffffff);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -14,8 +14,8 @@ header {
   background-position: center;
   background-size: cover;
   position: relative;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
-  border: solid .5px #2c3e50;
+  box-shadow: 0 10px 40px rgba(20, 20, 20, .5);
+  border: solid .5px #076585;
 }
 
 header h1 {
@@ -36,9 +36,9 @@ main{
   padding-left: 3%;
   padding-right: 3%;
   padding-bottom: 10%;
-  background: linear-gradient(#2c3e50, #3498db);
+  background: linear-gradient(#ece9e6, #ffffff);
   float: left;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+  box-shadow: 0 10px 40px rgba(20, 20, 20, .5);
 }
 
 section {
@@ -50,13 +50,13 @@ section {
 }
 
 main section h2 {
-    color: whitesmoke;
+    color: #141414;
     text-transform: uppercase;
     width: 100%;
     text-align: center;
     font-size: 2.6em;
     letter-spacing: .2em;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, .1))
+    filter: drop-shadow(4px 4px 4px rgba(20, 20, 20, .1))
 }
 
 #grid-floats {
@@ -76,7 +76,7 @@ main section h2 {
     margin-right: 0.5%;
     list-style: none;
     box-sizing: border-box;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 40px rgba(20, 20, 20, .1);
     background-color: white;
     cursor: pointer
     transition: 0.8s;
@@ -84,9 +84,11 @@ main section h2 {
     overflow: hidden;
 }
 
-#grid-floats .grid-item div{
-  width: 100%;
-  padding: 3%;
+#grid-floats .grid-item .item-wrap{
+  width: calc(100% - .5em);
+  position: absolute;
+  height: 75vh;
+  overflow: auto;
 }
 
 #grid-floats :nth-child(-n+2) {
@@ -96,33 +98,13 @@ main section h2 {
 }
 
 #grid-floats .grid-item:hover {
-  background: white;
-  overflow: auto;
+  background: linear-gradient(#2980b9, #6dd5fa, #ffffff);
 }
 
 #grid-floats .grid-item:hover img{
-  width: 95%;
-}
-
-#grid-floats .grid-item::before {
-  content: "";
-  position: absolute;
-  left:0;
-  bottom: 0;
-  width: 100%;
-  height: 10%;
-  background: linear-gradient(#3498db, #2c3e50);
-  z-index: 0;
-  transition: .8s;
-  cursor: pointer;
-}
-
-
-#grid-floats .grid-item:hover::before {
-  height: 1%;
+  width: 90%;
 }
   
-
 #grid-floats .grid-item h3 {
     width: 100%;
     height: 15%;
@@ -130,17 +112,13 @@ main section h2 {
     font-size: 1.2em;
     margin-top: 2em;
     color:#232526;
-    padding-left: 2%;
-    padding-right: 2%;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 5px rgba(20, 20, 20, .1);
 }
 
 #grid-floats .grid-item p {
+    font-size: .8em;
+    color: #161616;
     width: 80%;
-    float: left;
-    font-size: .9em;
-    padding-left: .9em;
-    color: #0f0f0f;
 }
 
 #grid-floats .grid-item img {
@@ -180,13 +158,9 @@ main section h2 {
     margin-bottom: 5%;
   }
 
-  #grid-floats .grid-item:hover {
-    height: 700px;
-  }
-
   #grid-floats .grid-item img {
-    margin-bottom: 30%;
-    width: 50%;
+    margin-bottom: 10%;
+    width: 70%;
   }
 
   #grid-floats .grid-item p {
@@ -203,7 +177,7 @@ main section h2 {
   }
 
   #grid-floats .grid-item {
-    height: 700px;
+    height: 600px;
     width: 24%;
     box-sizing: border-box;
     margin-top: 2%;
@@ -227,15 +201,11 @@ main section h2 {
   color:#232526;
   padding-left: 5%;
   padding-right: 5%;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-  }
-
-  #grid-floats .grid-item::before{
-    height: 10%;
+  box-shadow: 0 5px 5px rgba(20, 20, 20, .1);
   }
 
   #grid-floats .grid-item p {
-  width: 80%;
+  width: 100%;
   padding-left: 1em;
   padding-right: 1em;
   font-size: .9em;
@@ -244,7 +214,7 @@ main section h2 {
   #grid-floats .grid-item img {
   width: 70%;
   background-origin: border-box;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-bottom: 10%;
   }
 
@@ -273,7 +243,7 @@ FLEXBOX: TABLETS----
   background-color: white;
   justify-content: space-around;
   width: 32.33%;
-  height: 700px;
+  height: 600px;
   margin-left: 0.5%;
   margin-right: 0.5%;
   margin-top: 2%;
@@ -332,7 +302,7 @@ FLEXBOX: TABLETS----
   width: 95%;
 }
 
-#grid-flex .grid-item::before {
+/*#grid-flex .grid-item::before {
   content: "";
   position: absolute;
   left:0;
@@ -345,7 +315,7 @@ FLEXBOX: TABLETS----
 
 #grid-flex .grid-item:hover::before {
   height: 1%;
-}
+}*/
 
 
 
@@ -434,8 +404,8 @@ FLEXBOX: TABLETS----
       margin-top: 2em;
       }
     
-      #grid-flex .grid-item::before{
+      /*#grid-flex .grid-item::before{
         height: 10%;
-      }
+      }*/
   }
   
